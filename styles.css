@@ -23,6 +23,7 @@ body {
 #sidebar h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 #sidebar nav ul {
@@ -46,20 +47,33 @@ body {
 #main {
     flex-grow: 1;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#main section {
+    background: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 #main h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 #main h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 10px;
+    color: #ccc;
 }
 
 #main p {
     line-height: 1.6;
     text-align: justify;
     margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #aaa;
 }
