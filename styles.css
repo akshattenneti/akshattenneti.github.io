@@ -2,52 +2,59 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
-    background: #000;
+    display: flex;
+    background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+    color: #F5F5F5;
+}
+
+#sidebar {
+    width: 250px;
+    padding: 20px;
+    background: #262626;
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#sidebar img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#sidebar h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
     color: #fff;
 }
 
-header {
-    background: #000;
-    padding: 10px 0;
-}
-
-header nav ul {
+#sidebar nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
-header nav ul li {
-    margin: 0 15px;
+#sidebar nav ul li {
+    margin-bottom: 10px;
 }
 
-header nav ul li a {
-    color: #fff;
+#sidebar nav ul li a {
+    color: #F5F5F5;
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+#sidebar nav ul li a:hover {
     text-decoration: underline;
 }
 
 #main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-grow: 1;
     padding: 20px;
-    color: #aaa;
-}
-
-#main img {
-    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 #main section {
-    width: 80%;
-    background: #222;
+    background: #333;
     padding: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     border-radius: 10px;
 }
 
@@ -68,4 +75,5 @@ header nav ul li a:hover {
     text-align: justify;
     margin-bottom: 20px;
     font-size: 0.9em;
+    color: #aaa;
 }
