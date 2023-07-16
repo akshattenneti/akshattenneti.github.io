@@ -13,15 +13,17 @@ body {
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
     position: fixed;
-    height: 100%;
-    text-align: center;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 #sidebar img {
@@ -34,13 +36,14 @@ body {
 
 #sidebar h1 {
     font-size: 1.2em;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     color: #fff;
+    text-align: center;
 }
 
 #sidebar p {
     color: #aaa;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 #sidebar nav ul {
