@@ -2,18 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px auto;
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: #F5F5F5;
-    padding-left: 250px; /* added this line */
 }
 
 #sidebar {
-    width: 250px;
     padding: 20px;
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-    position: fixed; /* updated from sticky to fixed */
+    position: fixed; /* Updated from sticky to fixed */
     top: 0;
     height: 100vh;
     display: flex;
@@ -72,7 +71,6 @@ body {
 }
 
 #main {
-    width: calc(100% - 250px); /* subtract the width of the sidebar */
     padding: 20px;
     margin: 0 auto;
     max-width: 800px;
