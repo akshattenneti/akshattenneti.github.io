@@ -12,9 +12,10 @@ body {
     padding-bottom: 50px; 
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 100vh;
+}
 
 .profile {
     display: flex;
@@ -69,10 +70,8 @@ body {
 #main {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 270px; /* sidebar width + 20px */
-    margin-right: auto;
-    max-width: calc(100% - 270px - 40px); /* 100% - sidebar width - 40px padding */
-    box-sizing: border-box;
+    margin: 0 auto 0 270px; /* Adjust the left margin here */
+    max-width: 800px;
 }
 
 #main section {
