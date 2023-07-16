@@ -5,6 +5,7 @@ body {
     display: flex;
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: #F5F5F5;
+    padding-left: 250px; /* added this line */
 }
 
 #sidebar {
@@ -12,7 +13,7 @@ body {
     padding: 20px;
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-    position: fixed; /* this line has been updated */
+    position: fixed; /* updated from sticky to fixed */
     top: 0;
     height: 100vh;
     display: flex;
@@ -71,7 +72,7 @@ body {
 }
 
 #main {
-    flex-grow: 1;
+    width: calc(100% - 250px); /* subtract the width of the sidebar */
     padding: 20px;
     margin: 0 auto;
     max-width: 800px;
@@ -80,7 +81,7 @@ body {
 #main section {
     background: #333;
     padding: 20px;
-    margin-bottom: 10px;  /* Modify this line */
+    margin-bottom: 10px;
     border-radius: 10px;
 }
 
