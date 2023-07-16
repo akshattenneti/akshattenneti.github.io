@@ -15,7 +15,6 @@ body {
     position: fixed;
     top: 0;
     height: 100vh;
-}
 
 .profile {
     display: flex;
@@ -70,9 +69,9 @@ body {
 #main {
     flex-grow: 1;
     padding: 20px;
-    margin-left: calc(270px + 1em);
-    margin-right: calc(270px + 1em);
-    max-width: 800px;
+    margin-left: 270px; /* sidebar width + 20px */
+    margin-right: auto;
+    max-width: calc(100% - 270px - 40px); /* 100% - sidebar width - 40px padding */
     box-sizing: border-box;
 }
 
