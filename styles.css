@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
+    display: flex;
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: #F5F5F5;
 }
@@ -15,6 +16,9 @@ body {
     position: sticky;
     top: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .profile {
@@ -70,7 +74,7 @@ body {
 #main {
     flex-grow: 1;
     padding: 20px;
-    margin: 0 auto 0 270px; /* Adjust the left margin here */
+    margin: 0 auto;
     max-width: 800px;
 }
 
