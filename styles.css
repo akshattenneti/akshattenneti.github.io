@@ -2,20 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     height: 100vh;
-    width: 120%;
-    display: flex;
+    width: 100%;
+    display: grid; /* change this to grid */
+    grid-template-columns: auto 1fr; /* specify the grid columns */
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: #F5F5F5;
     overflow-x: hidden;
 }
 
 #sidebar {
-    width: 250px;
+    width: 100%; /* change this to 100% */
     padding: 20px;
     padding-bottom: 50px; 
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: sticky; /* change this to sticky */
     top: 0;
     height: 100vh;
     display: flex;
@@ -23,88 +24,21 @@ body {
     justify-content: flex-start;
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#sidebar img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
-}
-
-#sidebar h1, #sidebar p {
-    text-align: center;
-}
-
-#sidebar h1 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-#sidebar p {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-#sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 0;
-}
-
-#sidebar nav ul li {
-    margin-bottom: 5px; 
-    text-align: center;
-}
-
-#sidebar nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-}
-
-#sidebar nav ul li a:hover {
-    text-decoration: underline;
-}
-
 #main {
     flex-grow: 1;
     padding: 20px;
     margin: 0 auto;
     max-width: 800px;
+    overflow-x: hidden; /* add this to prevent horizontal scrolling */
 }
 
-#main section {
-    background: #333;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-#main h2 {
-    font-size: 1.4em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-#main h3 {
-    font-size: 1em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-#main p {
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-    color: #aaa;
+/* Adjust the width of the sidebar and the main content when the viewport is 768px or wider */
+@media screen and (min-width: 768px) {
+    #sidebar {
+        width: 250px; /* change this back to 250px */
+    }
+    
+    #main {
+        margin-left: 0; /* remove the left margin */
+    }
 }
