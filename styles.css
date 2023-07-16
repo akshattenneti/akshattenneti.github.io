@@ -6,6 +6,7 @@ body {
     display: flex;
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
     color: #F5F5F5;
+    overflow-x: hidden;
 }
 
 #sidebar {
