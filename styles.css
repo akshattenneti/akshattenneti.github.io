@@ -70,8 +70,10 @@ body {
 #main {
     flex-grow: 1;
     padding: 20px;
-    margin: 0 auto 0 270px; /* Adjust the left margin here */
+    margin-left: calc(270px + 1em);
+    margin-right: calc(270px + 1em);
     max-width: 800px;
+    box-sizing: border-box;
 }
 
 #main section {
