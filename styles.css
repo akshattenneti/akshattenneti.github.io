@@ -12,9 +12,12 @@ body {
     padding: 20px;
     background: #262626;
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.5);
-    position: fixed;
-    height: 100%;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .profile {
@@ -32,6 +35,10 @@ body {
     object-fit: cover;
 }
 
+#sidebar h1, #sidebar p {
+    text-align: center;
+}
+
 #sidebar h1 {
     font-size: 1.2em;
     margin-bottom: 5px;
@@ -46,10 +53,12 @@ body {
 #sidebar nav ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 0;
 }
 
 #sidebar nav ul li {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #sidebar nav ul li a {
