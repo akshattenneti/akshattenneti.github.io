@@ -1,116 +1,307 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshat V. Tenneti</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        h2, h3 {
-            margin-bottom: 10px;
-            padding-bottom: 0;
+        /* Mid-2000s minimalist blogger style */
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .profile-info h1 {
+            margin: 0 0 5px 0;
+            font-size: 28px;
+            color: #333;
+        }
+        
+        .profile-info p {
+            margin: 0;
+            color: #666;
+        }
+        
+        nav {
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+        
+        nav ul li a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px dotted #999;
+        }
+        
+        nav ul li a:hover {
+            color: #000;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+            color: #444;
+        }
+        
+        p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        footer {
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+        
+        .external-links {
+            margin-top: 5px;
+        }
+        
+        .external-links a {
+            color: #666;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        .external-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 750px) {
+            .container {
+                width: 95%;
+            }
+            
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <div class="profile">
-            <img src="CV.jpeg" alt="Akshat V. Tenneti's Picture">
-            <h1>Akshat V. Tenneti</h1>
-            <p>akshat10eti@gmail.com</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#leadership">Leadership and Community Service</a></li>
-                <li><a href="#workshops">Workshops and Certificates</a></li>
-                <li><a href="#research">Research and Presentations</a></li>
-                <li><a href="#debates">Debates and Discussions</a></li>
-                <li><a href="#advisory">Advisory Positions</a></li>
-                <li><a href="#other">Other Experiences</a></li>
-                <li><a href="CVM.pdf" target="_blank">My CV</a></li>
-                <li><a href="https://www.linkedin.com/in/akshattenneti/" target="_blank">LinkedIn</a></li> <!-- Added LinkedIn link -->
-            </ul>
-        </nav>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="CV.jpeg" alt="Akshat V. Tenneti">
+                <div class="profile-info">
+                    <h1>Akshat V. Tenneti</h1>
+                    <p>akshat10eti@gmail.com</p>
+                    <div class="external-links">
+                        <a href="CVM.pdf" target="_blank">Download CV</a>
+                        <a href="https://www.linkedin.com/in/akshattenneti/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#profile">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#debates">Debates</a></li>
+                    <li><a href="#other">Other</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="profile">
+                <h2>// About Me</h2>
+                <p>My academic trajectory converges on the legal aspects of emerging technologies like AI and Blockchain. It has been enriched by my recent role as a Research Scholar at Policy 4.0, a think tank pioneering in emerging technology policy, where I researched global governance frameworks surrounding AI & Blockchain, to provide strategic insights to aid effective policymaking.</p>
+                <p>My curiosity and focus extend to AI Safety & Alignment, AI Policy and Liability, which drives me to grasp the regulatory and legal intricacies of these impactful technologies. I'm equally passionate about Enterprise Blockchain Solutions Research and Blockchain Policy Research, making me well-positioned to contribute to the versatile challenges of compliance, policy, and legal research in the emerging tech industry across different verticals.</p>
+            </section>
+            
+            <section id="education">
+                <h2>// Education</h2>
+                <h3>B.A. LL.B. (Hons), School of Law, GITAM Deemed-To-Be-University (2020-2023)</h3>
+                <p>Transferred back to GITAM in 2020 after exploring different learning environments at GLC, Bombay and KLE Society's Law College, Bengaluru.</p>
+                
+                <h3>KLE Society's Law College, Bengaluru (2019-2020)</h3>
+                <h3>Government Law College, Mumbai (2018-2019)</h3>
+                <h3>School of Law, GITAM Deemed-To-Be-University (2017-2018)</h3>
+            </section>
+            
+            <section id="experience">
+                <h2>// Legal Experience</h2>
+                
+                <h3>Legal and Research Intern, Permissionless (Dec 2022 - Jan 2023)</h3>
+                <p>Assisted the core team in competitor research, ideating the Permissionless pitch deck, and conducting core compliance research for Async (now, 5dollarjobs). Played a crucial role in refining a theological LLM based chatbot's context stack, co-drafting Puter's whitepaper for a Decentralized Open Virtual Machine for hosting and deploying Decentralized Apps, and crafting general-purpose internal-use legal workflows.</p>
+                
+                <h3>Legal and Strategy Consultant, citrineandmint.eth (Jun 2022 - Present)</h3>
+                <p>Guided the launch of the client's Non-Fungible Token (NFT) 1/1 Art Extended Art Project on Foundation and OpenSea Marketplaces. Managed social media positioning, content and strategy that led to the successful sale of the client's first NFT Art on the Ethereum Blockchain.</p>
+                
+                <h3>Legal and Compliance Consultant, DentalQ (Jun 2023 - Present)</h3>
+                <p>Worked closely with the core team to refine the context stack to reduce hallucinatory outputs, ensure the ethical sourcing of underlying training material, and address potential compliance and liability issues.</p>
+                
+                <h3>Co-Founder and Head of Legal, Tripleths ENS DAO (Apr 2022 - Present)</h3>
+                <p>Navigating the complex legal landscape of Digital Asset Portfolio Management and Consultation. Developing insights into Blockchain Asset Intellectual Property landscapes through an experimental DAO.</p>
+            </section>
+            
+            <section id="leadership">
+                <h2>// Leadership and Community Service</h2>
+                
+                <h3>Founding Member, Legal Assistance Club for Student Organisations (LACSO), GITAM School of Law (Aug 2022 - Dec 2022)</h3>
+                <p>Played a key role in launching this special interest group, aimed at bridging the gap between theoretical learning and practical application by providing legal assistance to clubs and student bodies in GITAM. Contributed to the development of best practices and guidelines for inter-institutional events. Provided input on club charters to enhance their effectiveness and compliance.</p>
+            </section>
+            
+            <section id="workshops">
+                <h2>// Workshops and Certificates</h2>
+                
+                <h3>Two Day Legal Methodology Workshop, School of Law, GITAM (2019)</h3>
+                <h3>Workshop on Legal Aspects Pertaining to Crimes Against Women, GITAM (2019)</h3>
+                
+                <h3>iPolicy for Young Leaders by Centre for Civil Society (2018)</h3>
+                <p>Selected as one of 20 members from over 600 applications to participate in this prestigious public policy certificate program. An intensive 3-day workshop honing skills in policy analysis, economic reasoning, and emerging trends.</p>
+                
+                <h3>Road Safety Workshop Policy Ideation Team, KLE Law College, Bengaluru</h3>
+                
+                <h3>Workshop, Centre for Law and Policy Research (2019)</h3>
+                <p>Explored the relevance of the erstwhile Indian Constituent Assembly debates to solve contemporary issues.</p>
+            </section>
+            
+            <section id="research">
+                <h2>// Research and Presentations</h2>
+                
+                <h3>"Contextualising the Conference of the Parties" (Nov 2022)</h3>
+                <p>Co-authored and presented at the UGC Two-Day National Seminar, College of Law, Andhra University.</p>
+                
+                <h3>"Blockchain, Digital Assets on the Blockchain and their Intersection with International Arbitration" (Dec 2022)</h3>
+                <p>Authored and presented at the Two Day International Conference on Mediation as a Mode of Settlement of Disputes in the New Millenium: A way Forward, School of Law.</p>
+            </section>
+            
+            <section id="debates">
+                <h2>// Debates and Discussions</h2>
+                
+                <h3>GLC Knockout: Policy Ideation Debate (Sep 2018)</h3>
+                <p>"Our Pride is in Your Court Now: Is the Abrogation of Section 377 the Duty of a Judicially Active Supreme Court or a Competent Parliament?"</p>
+                
+                <h3>The Policy Debate, GLC (Oct 2018)</h3>
+                <p>"Crack in the Pillars - Will the Indian Democracy Sustain?"</p>
+                
+                <h3>Parliamentary Debate, National Law University, Jodhpur (Apr 2019)</h3>
+                <p>Broke as a finalist adjudicator in a debut National Debate tournament, a first from GLC, Bombay. Secured a position in the top 10% of all adjudicators.</p>
+                
+                <h3>Leibniz Lecture - The Remains of Liberalism, Azim Premji University (Oct 2019)</h3>
+                <p>Engaged with Leibniz Prize Recipient Prof. Christoph Möllers, discussing the rise of libertarian sentiment in the Indian Urban Middle Class.</p>
+            </section>
+            
+            <section id="advisory">
+                <h2>// Advisory Positions</h2>
+                
+                <h3>Member, Advisory Board, CB Educational Services (Sep 2019 - Aug 2022)</h3>
+                <p>Instrumental in website ideation and design, organizing international virtual conference "VirtuCon" on Law and Legal Studies, and drafting publication guidelines.</p>
+            </section>
+            
+            <section id="other">
+                <h2>// Other Experiences</h2>
+                
+                <h3>Second Runner Up, Seeghra Tantra, TEQIP National Hackathon</h3>
+                <p>Led legal and compliance research for team's prize-winning citizen safety device.</p>
+                
+                <h3>Freelance Writer (2018-Present)</h3>
+                <p>Authored high-impact content for clients from major corporates such as Koch Business Solutions, VISA, and more.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© Akshat V. Tenneti | Last updated: February 2025</p>
+        </footer>
     </div>
-    <div id="main">
-        <section id="profile">
-           <section id="profile">
-            <h2>Profile</h2>
-            <p>My academic trajectory converges on the legal aspects of emerging technologies like AI and Blockchain. It has been enriched by my recent role as a Research Scholar at Policy 4.0, a think tank pioneering in emerging technology policy, where I researched global governance frameworks surrounding AI & Blockchain, to provide strategic insights to aid effective policymaking. 
-
-My curiosity and focus extend to AI Safety & Alignment, AI Policy and Liability, which drives me to grasp the regulatory and legal intricacies of these impactful technologies. I'm equally passionate about Enterprise Blockchain Solutions Research and Blockchain Policy Research, making me well-positioned to contribute to the versatile challenges of compliance, policy, and legal research in the emerging tech industry across different verticals.
-</p>
-        </section>
-        <section id="education">    
-            <h2>Education</h2>
-            <h3>B.A. LL.B. (Hons), School of Law, GITAM Deemed-To-Be-University (2020-2023)</h3>
-            <p>Transferred back to GITAM in 2020 after exploring different learning environments at GLC, Bombay and KLE Society's Law College, Bengaluru.</p>
-            <h3>KLE Society's Law College, Bengaluru (2019-2020)</h3>
-            <h3>Government Law College, Mumbai (2018-2019)</h3>
-            <h3>School of Law, GITAM Deemed-To-Be-University (2017-2018)</h3>
-        </section>
-        <section id="experience">
-            <h2>Legal Experience</h2>
-            <h3>1. Legal and Research Intern, Permissionless (Dec 2022 - Jan 2023)</h3>
-            <p>Assisted the core team in competitor research, ideating the Permissionless pitch deck, and conducting core compliance research for Async (now, 5dollarjobs). Played a crucial role in refining a theological LLM based chatbot’s context stack, co-drafting Puter’s whitepaper for a Decentralized Open Virtual Machine for hosting and deploying Decentralized Apps, and crafting general-purpose internal-use legal workflows.</p>
-            <h3>2. Legal and Strategy Consultant, citrineandmint.eth (Jun 2022 - Present)</h3>
-            <p>Guided the launch of the client’s Non-Fungible Token (NFT) 1/1 Art Extended Art Project on Foundation and OpenSea Marketplaces. Managed social media positioning, content and strategy that led to the successful sale of the client's first NFT Art on the Ethereum Blockchain.</p>
-            <h3>3. Legal and Compliance Consultant, DentalQ (Jun 2023 - Present)</h3>
-            <p>Worked closely with the core team to refine the context stack to reduce hallucinatory outputs, ensure the ethical sourcing of underlying training material, and address potential compliance and liability issues.</p>
-            <h3>4. Co-Founder and Head of Legal, Tripleths ENS DAO (Apr 2022 - Present)</h3>
-            <p>Navigating the complex legal landscape of Digital Asset Portfolio Management and Consultation. Developing insights into Blockchain Asset Intellectual Property landscapes through an experimental DAO.</p>
-        </section>
-              <section id="leadership">
-            <h2>Leadership and Community Service</h2>
-            <h3>Founding Member, Legal Assistance Club for Student Organisations (LACSO), GITAM School of Law (Aug 2022 - Dec 2022)</h3>
-            <p>Played a key role in launching this special interest group, aimed at bridging the gap between theoretical learning and practical application by providing legal assistance to clubs and student bodies in GITAM.</p>
-            <p>Contributed to the development of best practices and guidelines for inter-institutional events.</p>
-            <p>Provided input on club charters to enhance their effectiveness and compliance.</p>
-        </section>
-         <section id="workshops">
-            <h2>Workshops and Certificates</h2>
-            <h3>1. Two Day Legal Methodology Workshop, School of Law, GITAM Deemed-To-Be University (2019)</h3>
-            <h3>2. Workshop on Legal Aspects Pertaining to Crimes Against Women, School of Law, GITAM Deemed-To-Be University (2019)</h3>
-            <h3>3. iPolicy for Young Leaders by Centre for Civil Society (2018)</h3>
-            <p>Selected as one of 20 members from over 600 applications to participate in this prestigious public policy certificate program. An intensive 3-day workshop honing skills in policy analysis, economic reasoning, and emerging trends.</p>
-            <h3>4. Road Safety Workshop Policy Ideation Team, KLE Law College, Bengaluru</h3>
-            <h3>5. Workshop, Centre for Law and Policy Research (2019)</h3>
-            <p>Explored the relevance of the erstwhile Indian Constituent Assembly debates to solve contemporary issues.</p>
-        </section>
-        <section id="research">
-    <h2>Research and Presentations</h2>
-    <p>1. Co-authored and presented a paper titled "Contextualising the Conference of the Parties" at the UGC Two-Day National Seminar, College of Law, Andhra University (Nov 2022).</p>
-    <p>2. Authored and presented a paper titled "Blockchain, Digital Assets on the Blockchain and their Intersection with International Arbitration and other Dispute Resolution Mechanisms" at the Two Day International Conference on Mediation as a Mode of Settlement of Disputes in the New Millenium: A way Forward, School of Law (Dec 2022).</p>
-</section>
-        <section id="debates">
-            <h2>Debates and Discussions</h2>
-            <h3>1. GLC Knockout: Policy Ideation Debate "Our Pride is in Your Court Now: Is the Abrogation of Section 377 the Duty of a Judicially Active Supreme Court or a Competent Parliament?" (Sep 2018)</h3>
-            <h3>2. The Policy Debate, GLC : Crack in the Pillars - Will the Indian Democracy Sustain? (Oct 2018)</h3>
-            <h3>3. Represented GLC, Bombay at the Parliamentary Debate, National Law University, Jodhpur (Apr 2019)</h3>
-            <p>Broke as a finalist adjudicator in a debut National Debate tournament, a first from GLC, Bombay. Secured a position in the top 10% of all adjudicators.</p>
-            <h3>4. Leibniz Lecture - The Remains of Liberalism, Azim Premji University (Oct 2019)</h3>
-            <p>Engaged with Leibniz Prize Recipient Prof. Christoph Möllers, discussing the rise of libertarian sentiment in the Indian Urban Middle Class.</p>
-        </section>
-        <section id="advisory">
-            <h2>Advisory Positions</h2>
-            <h3>Member, Advisory Board, CB Educational Services (Sep 2019 - Aug 2022)</h3>
-            <p>Instrumental in website ideation and design, organizing international virtual conference "VirtuCon" on Law and Legal Studies, and drafting publication guidelines.</p>
-        </section>
-        <section id="other">
-            <h2>Other Experiences</h2>
-            <h3>1. Second Runner Up, Seeghra Tantra, TEQIP National Hackathon:</h3>
-            <p>Led legal and compliance research for team's prize-winning citizen safety device.</p>
-            <h3>2. Freelance Writer:</h3>
-            <p>Authored high-impact content for clients from major corporates such as Koch Business Solutions, VISA, and more (2018-Present).</p>
-        </section>
-    </main>
-    <footer>
-        <p>© Akshat V. Tenneti</p>
-        <meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
-    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
