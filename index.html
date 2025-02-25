@@ -3,765 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshat V. Tenneti | Technology Law & Policy Research</title>
+    <title>Akshat V. Tenneti</title>
     <style>
-        /* Base styles */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --light-text: #666;
-            --lighter-text: #888;
-            --link-color: #2980b9;
-            --highlight-bg: #f9f9f9;
-            --border-color: #eee;
-            --shadow-color: rgba(0,0,0,0.05);
-        }
-        
-        * {
-            box-sizing: border-box;
+        /* Mid-2000s minimalist blogger style */
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-        }
-        
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #fff;
-            font-size: 16px;
-            overflow-x: hidden;
+            background-color: #f5f5f5;
+            color: #333;
         }
         
         .container {
-            max-width: 1200px;
+            width: 700px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            min-height: 100vh;
         }
         
-        .grid {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0 0 15px 0;
-            font-weight: 600;
-            line-height: 1.3;
-            color: var(--primary-color);
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-        
-        h3 {
-            font-size: 1.3rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        
-        h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
-        ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        /* Header */
         header {
             padding: 20px 0;
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .site-title {
-            font-size: 1.8rem;
-            margin: 0;
-        }
-        
-        .site-title a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: white;
-            cursor: pointer;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-toggle {
-                display: block;
-            }
-            
-            .main-nav {
-                display: none;
-                width: 100%;
-                margin-top: 15px;
-            }
-            
-            .main-nav.active {
-                display: block;
-            }
-            
-            .header-content {
-                flex-wrap: wrap;
-            }
-            
-            .main-nav ul {
-                flex-direction: column;
-            }
-        }
-        
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .main-nav li {
-            margin: 0 0 0 20px;
-        }
-        
-        .main-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: opacity 0.2s;
-        }
-        
-        .main-nav a:hover {
-            opacity: 0.8;
-            text-decoration: none;
-        }
-        
-        /* Sidebar */
-        .sidebar {
-            background-color: var(--highlight-bg);
-            padding: 25px;
-            border-radius: 8px;
-            position: sticky;
-            top: 20px;
-            height: fit-content;
-            box-shadow: 0 2px 10px var(--shadow-color);
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            display: block;
-            border: 3px solid white;
-            box-shadow: 0 2px 15px var(--shadow-color);
-        }
-        
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 25px;
-        }
-        
-        .contact-info li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--accent-color);
-            width: 20px;
-            text-align: center;
-        }
-        
-        .skills-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .skills-list li {
-            margin-bottom: 8px;
-            background-color: rgba(52, 152, 219, 0.1);
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        
-        .languages-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .languages-list li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .language-level {
-            width: 60%;
-            height: 6px;
-            background-color: #eee;
-            border-radius: 3px;
-        }
-        
-        .language-progress {
-            height: 100%;
-            background-color: var(--accent-color);
-            border-radius: 3px;
-        }
-        
-        /* Main Content */
-        .main-content {
-            padding-bottom: 50px;
-        }
-        
-        .bio {
-            font-size: 1.1rem;
-            line-height: 1.8;
             margin-bottom: 30px;
-            color: var(--light-text);
+            border-bottom: 1px solid #eee;
         }
         
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .experience-item, .education-item, .achievement-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .experience-item:last-child, .education-item:last-child, .achievement-item:last-child {
-            border-bottom: none;
-        }
-        
-        .item-header {
+        .profile {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .profile-info h1 {
+            margin: 0 0 5px 0;
+            font-size: 28px;
+            color: #333;
+        }
+        
+        .profile-info p {
+            margin: 0;
+            color: #666;
+        }
+        
+        nav {
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
             flex-wrap: wrap;
         }
         
-        .item-title {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin: 0;
+        nav ul li {
+            margin-right: 15px;
+            margin-bottom: 5px;
         }
         
-        .item-subtitle {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            margin: 5px 0;
+        nav ul li a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px dotted #999;
         }
         
-        .item-date {
-            color: var(--lighter-text);
-            font-size: 0.9rem;
+        nav ul li a:hover {
+            color: #000;
         }
         
-        .item-description {
-            color: var(--light-text);
+        section {
+            margin-bottom: 40px;
         }
         
-        .item-description ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+            color: #333;
         }
         
-        .achievement-item {
-            background-color: var(--highlight-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border: none;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px var(--shadow-color);
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+            color: #444;
         }
         
-        .achievement-title {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 10px;
+        p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            color: #555;
         }
         
-        /* Footer */
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 0;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
             text-align: center;
         }
         
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
+        .external-links {
+            margin-top: 5px;
         }
         
-        .social-links {
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-            color: white;
-            font-size: 1.2rem;
-            transition: transform 0.2s;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        /* Animations and Effects */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-        
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 4px;
+        .external-links a {
+            color: #666;
             text-decoration: none;
-            transition: background-color 0.2s;
-            font-weight: 500;
+            margin-right: 10px;
         }
         
-        .btn:hover {
-            background-color: #2980b9;
-            text-decoration: none;
-            color: white;
+        .external-links a:hover {
+            text-decoration: underline;
         }
         
-        /* Icons (using entities for simplicity) */
-        .icon {
-            font-style: normal;
-            width: 20px;
-            display: inline-block;
-            text-align: center;
-            margin-right: 5px;
+        @media (max-width: 750px) {
+            .container {
+                width: 95%;
+            }
+            
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1 class="site-title"><a href="#">Akshat V. Tenneti</a></h1>
-                <button class="nav-toggle">≡</button>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="grid">
-            <aside class="sidebar">
-                <img src="CV.jpeg" alt="Akshat V. Tenneti" class="profile-img">
-                
-                <h3>Contact</h3>
-                <ul class="contact-info">
-                    <li><span class="icon">📱</span> +91 8500641810</li>
-                    <li><span class="icon">✉️</span> akshat10eti@gmail.com</li>
-                    <li><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/akshattenneti/" target="_blank">LinkedIn</a></li>
-                    <li><span class="icon">🌐</span> <a href="https://github.com/akshattenneti" target="_blank">GitHub</a></li>
-                </ul>
-                
-                <h3>Skills</h3>
-                <ul class="skills-list">
-                    <li>Policy Research & Development</li>
-                    <li>Legal Research</li>
-                    <li>Drafting</li>
-                    <li>Prompt Engineering</li>
-                    <li>Comprehensive Communication Skills</li>
-                </ul>
-                
-                <h3>Languages</h3>
-                <ul class="languages-list">
-                    <li>
-                        English
-                        <div class="language-level">
-                            <div class="language-progress" style="width: 100%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        Telugu
-                        <div class="language-level">
-                            <div class="language-progress" style="width: 95%"></div>
-                        </div>
-                    </li>
-                    <li>
-                        Hindi
-                        <div class="language-level">
-                            <div class="language-progress" style="width: 85%"></div>
-                        </div>
-                    </li>
-                </ul>
-                
-                <div class="text-center" style="margin-top: 30px;">
-                    <a href="CVM.pdf" target="_blank" class="btn">Download CV</a>
+        <header>
+            <div class="profile">
+                <img src="CV.jpeg" alt="Akshat V. Tenneti">
+                <div class="profile-info">
+                    <h1>Akshat V. Tenneti</h1>
+                    <p>akshat10eti@gmail.com</p>
+                    <div class="external-links">
+                        <a href="CVM.pdf" target="_blank">Download CV</a>
+                        <a href="https://www.linkedin.com/in/akshattenneti/" target="_blank">LinkedIn</a>
+                    </div>
                 </div>
-            </aside>
+            </div>
             
-            <main class="main-content">
-                <section id="about" class="section fade-in">
-                    <h2>About Me</h2>
-                    <div class="bio">
-                        <p>My academic trajectory converges on the legal, policy and regulatory aspects of emerging technologies. It has been enriched by my recent role as a Research Scholar at Policy 4.0, a think tank pioneering in emerging technology policy, where I researched global governance frameworks surrounding AI & Blockchain, to provide strategic insights to aid effective policymaking.</p>
-                        <p>My curiosity and focus extend to AI Safety, Policy and Liability. I'm equally passionate about Enterprise Blockchain, Cryptocurrencies and Decentralization. Driven by this deep interest in the intersection of law and technology, I am eager to leverage my knowledge to tackle the complex regulatory environment surrounding emerging tech, making meaningful contributions to both legal practice and policy development.</p>
-                    </div>
-                </section>
+            <nav>
+                <ul>
+                    <li><a href="#profile">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#debates">Debates</a></li>
+                    <li><a href="#other">Other</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="profile">
+                <h2>// About Me</h2>
+                <p>My academic trajectory converges on the legal aspects of emerging technologies like AI and Blockchain. It has been enriched by my recent role as a Research Scholar at Policy 4.0, a think tank pioneering in emerging technology policy, where I researched global governance frameworks surrounding AI & Blockchain, to provide strategic insights to aid effective policymaking.</p>
+                <p>My curiosity and focus extend to AI Safety & Alignment, AI Policy and Liability, which drives me to grasp the regulatory and legal intricacies of these impactful technologies. I'm equally passionate about Enterprise Blockchain Solutions Research and Blockchain Policy Research, making me well-positioned to contribute to the versatile challenges of compliance, policy, and legal research in the emerging tech industry across different verticals.</p>
+            </section>
+            
+            <section id="education">
+                <h2>// Education</h2>
+                <h3>B.A. LL.B. (Hons), School of Law, GITAM Deemed-To-Be-University (2020-2023)</h3>
+                <p>Transferred back to GITAM in 2020 after exploring different learning environments at GLC, Bombay and KLE Society's Law College, Bengaluru.</p>
                 
-                <section id="experience" class="section fade-in">
-                    <h2>Professional Experience</h2>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Samvad Partners, Bangalore</h3>
-                            <span class="item-date">January 2025</span>
-                        </div>
-                        <h4 class="item-subtitle">Legal Intern</h4>
-                        <div class="item-description">
-                            <p>Successfully completed an internship working under the supervision of different teams of the Firm and on various assignments, including:</p>
-                            <ul>
-                                <li>Provided the Firm with an internal presentation on "The Pixel Doctrine – Empiricism for IP Reform in the Algocene"</li>
-                                <li>Conducted comparative tabulated analysis of (Draft) DPDP Rules, 2025 and GDPR</li>
-                                <li>Researched data retention across different sectors/industries and data types</li>
-                                <li>Reviewed and suggested changes for Information Security Policy</li>
-                                <li>Researched UDRP proceedings pertaining to domain name disputes, WIPO Rules, Supplemental Rules and previous orders, including research on redactions under WIPO-UDRP procedure</li>
-                                <li>Researched exceptions/defenses under Trademark Act for the use of trademarked devices without prior authorization/license</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Ikigai Law</h3>
-                            <span class="item-date">December 2024</span>
-                        </div>
-                        <h4 class="item-subtitle">Legal Intern</h4>
-                        <div class="item-description">
-                            <ul>
-                                <li>Conducted research on liability determination mechanisms and shared responsibility models for analyzing legal frameworks and regulatory requirements surrounding Artificial Intelligence technologies</li>
-                                <li>Researched and prepared legal notes on data protection compliance, including analysis of sector-specific retention requirements, copyright protections for digital databases, and unsolicited commercial communication regulations</li>
-                                <li>Researched and examined regulatory constraints affecting startup expansion, growth of payment instruments regulation and lending service provider frameworks</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Policy 4.0</h3>
-                            <span class="item-date">September 2023 - January 2024</span>
-                        </div>
-                        <h4 class="item-subtitle">Non-Resident Research Scholar</h4>
-                        <div class="item-description">
-                            <ul>
-                                <li>Conducted core research supporting Policy 4.0's thought leadership initiatives on emerging technologies, including decentralized assets and AI, with a strong emphasis on regulatory and policy dimensions</li>
-                                <li>Comparatively analyzed global AI regulatory approaches and governance frameworks to develop AI governance policy drafts and briefs, offering actionable recommendations for policy adjustments and enhancements, contributing to a comprehensive understanding of international regulatory landscapes</li>
-                                <li>Engaged in the iterative development of novel policy frameworks, laying the groundwork for innovative regulatory approaches to technology governance</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Professor Brian L. Frye</h3>
-                            <span class="item-date">July 2023 - September 2023</span>
-                        </div>
-                        <h4 class="item-subtitle">Research Mentee</h4>
-                        <div class="item-description">
-                            <p>Engaged in in-depth research under the mentorship of Professor Brian L. Frye, an international authority on copyright and emerging technology law, focusing on the complex challenges of copyright infringements in the training of Foundational Gen-AI Models.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">DentalQ</h3>
-                            <span class="item-date">February 2023 - June 2023</span>
-                        </div>
-                        <h4 class="item-subtitle">Legal and Compliance Consultant</h4>
-                        <div class="item-description">
-                            <p>Assisted the core team of a Dental Knowledge System to refine the context stack to reduce hallucinatory outputs, ensure the ethical sourcing of underlying training material, and address potential compliance and liability issues.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Permissionless</h3>
-                            <span class="item-date">December 2022 - January 2023</span>
-                        </div>
-                        <h4 class="item-subtitle">Research and Legal Intern</h4>
-                        <div class="item-description">
-                            <ul>
-                                <li>Assisted the core team in competitor research, ideating the Permissionless pitch deck, and conducting core compliance research for Async (now, 5dollarjobs)</li>
-                                <li>Refined a Large-Language Model based theological chatbot's context stack, co-drafting a whitepaper for a Decentralized Open Virtual Machine for hosting and deploying Decentralized Apps</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">citrineandmint.eth</h3>
-                            <span class="item-date">June 2022 - December 2022</span>
-                        </div>
-                        <h4 class="item-subtitle">Strategy Associate</h4>
-                        <div class="item-description">
-                            <p>Guided the launch of the client's Non-Fungible Token (NFT) 1/1 Art Extended Art Project on Foundation and OpenSea Marketplaces. Managed social media positioning, content and strategy that led to the successful sale of the client's first NFT Art on the Ethereum Blockchain.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Adv. Ayush Jaiswal's Law Office</h3>
-                            <span class="item-date">May 2022 - June 2022</span>
-                        </div>
-                        <h4 class="item-subtitle">Legal Intern</h4>
-                        <div class="item-description">
-                            <p>Observed and undertook detailed legal research and analysis to address disputes, identifying key issues and potential resolutions. Formulated strategic solutions tailored to party needs, ensuring equitable outcomes.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Freelance Content Development</h3>
-                            <span class="item-date">September 2021 - April 2023</span>
-                        </div>
-                        <div class="item-description">
-                            <p>Authored commissioned high-impact content for clients from major corporates such as Koch Business Solutions, VISA, etc.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Legal Assistance Club for Student Organisations (LACSO), GITAM University</h3>
-                            <span class="item-date">August 2022 - December 2022</span>
-                        </div>
-                        <h4 class="item-subtitle">Founding Member and Technical Officer</h4>
-                        <div class="item-description">
-                            <ul>
-                                <li>Played a key role in launching this special interest group, aimed at bridging the gap between theoretical learning and practical application by providing legal assistance to clubs and student bodies in GITAM</li>
-                                <li>Contributed to the development of best practices and guidelines for inter-institutional events</li>
-                                <li>Provided input on club charters to enhance their effectiveness and compliance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                <h3>KLE Society's Law College, Bengaluru (2019-2020)</h3>
+                <h3>Government Law College, Mumbai (2018-2019)</h3>
+                <h3>School of Law, GITAM Deemed-To-Be-University (2017-2018)</h3>
+            </section>
+            
+            <section id="experience">
+                <h2>// Legal Experience</h2>
                 
-                <section id="education" class="section fade-in">
-                    <h2>Education</h2>
-                    
-                    <div class="education-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Jindal Global Law School, O.P. Jindal Global University</h3>
-                            <span class="item-date">Currently Pursuing</span>
-                        </div>
-                        <h4 class="item-subtitle">LL.M. - Technology Law & IP Rights</h4>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="item-header">
-                            <h3 class="item-title">School of Law, GITAM Deemed-To-Be University</h3>
-                            <span class="item-date">2019-2024</span>
-                        </div>
-                        <h4 class="item-subtitle">B.A. LL.B (Hons)</h4>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Government Law College, Mumbai</h3>
-                            <span class="item-date">2018-2019</span>
-                        </div>
-                        <h4 class="item-subtitle">B.L.S., LLB, (Transferred)</h4>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Visakha Valley School</h3>
-                            <span class="item-date">2017</span>
-                        </div>
-                        <h4 class="item-subtitle">12th Grade, Science</h4>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="item-header">
-                            <h3 class="item-title">Sri Sathya Sai Vidya Vihar</h3>
-                            <span class="item-date">2015</span>
-                        </div>
-                        <h4 class="item-subtitle">10th Grade</h4>
-                    </div>
-                </section>
+                <h3>Legal and Research Intern, Permissionless (Dec 2022 - Jan 2023)</h3>
+                <p>Assisted the core team in competitor research, ideating the Permissionless pitch deck, and conducting core compliance research for Async (now, 5dollarjobs). Played a crucial role in refining a theological LLM based chatbot's context stack, co-drafting Puter's whitepaper for a Decentralized Open Virtual Machine for hosting and deploying Decentralized Apps, and crafting general-purpose internal-use legal workflows.</p>
                 
-                <section id="achievements" class="section fade-in">
-                    <h2>Scholastic Achievements</h2>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Book Chapter</h3>
-                        <p>"Blockchain, Digital Assets, and Their Intersection with International Arbitration and Other Dispute Resolution Mechanisms," published as a chapter in Mediation as a Technique of Alternative Dispute Resolution: An Overview, ISBN: 978-81-951020-0-6.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Policy Report</h3>
-                        <p>Researched for and Co-authored the report "Agile Policymaking for AI: A Global Perspective with a Three-Dimensional Toolkit," a report that delineates a comprehensive exploration of AI policy challenges and solutions, offering insights into global AI governance whilst proposing an original inclusive and operational policymaking framework.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Research Collaboration</h3>
-                        <p>Co-authored an upcoming paper with Professor Brian L. Frye on copyright challenges in generative AI models, examining the use of internet-sourced data for training, and its implications for digital copying, data retention, and content generation.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Conference Presentation</h3>
-                        <p>Presented research at the International Conference on Mediation as a Mode of Settlement of Disputes in the New Millennium, focusing on blockchain-based digital assets and their implications for international arbitration.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Seminar Presentation</h3>
-                        <p>Delivered a presentation titled "Contextualizing the Conference of the Parties" at the UGC Two-Day National Seminar, College of Law, Andhra University.</p>
-                    </div>
-                    
-                    <h2>Awards & Accolades</h2>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Best Smart Idea Award</h3>
-                        <p>Worked on liability determinations for team's "Citizen-Safety-System" proposal. Finalist and recipient of the "Best Smart Idea" Award at SmartIDEATHON 2020, Venture Development Centre, GITAM University.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">TEQIP National Hackathon - SEEGHRA TANTRA 2019</h3>
-                        <p>Led liability research for the team that secured 3rd place & Press Coverage at the TEQIP National Hackathon - SEEGHRA TANTRA 2019 at Andhra University, recognized for innovative legal research in citizen safety devices.</p>
-                    </div>
-                    
-                    <div class="achievement-item">
-                        <h3 class="achievement-title">Breaking Adjudicator</h3>
-                        <p>Broke as a finalist adjudicator at the Second National Law School Parliamentary Debate 2019 at NLU Jodhpur, ranking in the top 10% of adjudicators in my debut National Asian Parliamentary Debate tournament, representing GLC Bombay's Debate Contingent.</p>
-                    </div>
-                </section>
-            </main>
-        </div>
+                <h3>Legal and Strategy Consultant, citrineandmint.eth (Jun 2022 - Present)</h3>
+                <p>Guided the launch of the client's Non-Fungible Token (NFT) 1/1 Art Extended Art Project on Foundation and OpenSea Marketplaces. Managed social media positioning, content and strategy that led to the successful sale of the client's first NFT Art on the Ethereum Blockchain.</p>
+                
+                <h3>Legal and Compliance Consultant, DentalQ (Jun 2023 - Present)</h3>
+                <p>Worked closely with the core team to refine the context stack to reduce hallucinatory outputs, ensure the ethical sourcing of underlying training material, and address potential compliance and liability issues.</p>
+                
+                <h3>Co-Founder and Head of Legal, Tripleths ENS DAO (Apr 2022 - Present)</h3>
+                <p>Navigating the complex legal landscape of Digital Asset Portfolio Management and Consultation. Developing insights into Blockchain Asset Intellectual Property landscapes through an experimental DAO.</p>
+            </section>
+            
+            <section id="leadership">
+                <h2>// Leadership and Community Service</h2>
+                
+                <h3>Founding Member, Legal Assistance Club for Student Organisations (LACSO), GITAM School of Law (Aug 2022 - Dec 2022)</h3>
+                <p>Played a key role in launching this special interest group, aimed at bridging the gap between theoretical learning and practical application by providing legal assistance to clubs and student bodies in GITAM. Contributed to the development of best practices and guidelines for inter-institutional events. Provided input on club charters to enhance their effectiveness and compliance.</p>
+            </section>
+            
+            <section id="workshops">
+                <h2>// Workshops and Certificates</h2>
+                
+                <h3>Two Day Legal Methodology Workshop, School of Law, GITAM (2019)</h3>
+                <h3>Workshop on Legal Aspects Pertaining to Crimes Against Women, GITAM (2019)</h3>
+                
+                <h3>iPolicy for Young Leaders by Centre for Civil Society (2018)</h3>
+                <p>Selected as one of 20 members from over 600 applications to participate in this prestigious public policy certificate program. An intensive 3-day workshop honing skills in policy analysis, economic reasoning, and emerging trends.</p>
+                
+                <h3>Road Safety Workshop Policy Ideation Team, KLE Law College, Bengaluru</h3>
+                
+                <h3>Workshop, Centre for Law and Policy Research (2019)</h3>
+                <p>Explored the relevance of the erstwhile Indian Constituent Assembly debates to solve contemporary issues.</p>
+            </section>
+            
+            <section id="research">
+                <h2>// Research and Presentations</h2>
+                
+                <h3>"Contextualising the Conference of the Parties" (Nov 2022)</h3>
+                <p>Co-authored and presented at the UGC Two-Day National Seminar, College of Law, Andhra University.</p>
+                
+                <h3>"Blockchain, Digital Assets on the Blockchain and their Intersection with International Arbitration" (Dec 2022)</h3>
+                <p>Authored and presented at the Two Day International Conference on Mediation as a Mode of Settlement of Disputes in the New Millenium: A way Forward, School of Law.</p>
+            </section>
+            
+            <section id="debates">
+                <h2>// Debates and Discussions</h2>
+                
+                <h3>GLC Knockout: Policy Ideation Debate (Sep 2018)</h3>
+                <p>"Our Pride is in Your Court Now: Is the Abrogation of Section 377 the Duty of a Judicially Active Supreme Court or a Competent Parliament?"</p>
+                
+                <h3>The Policy Debate, GLC (Oct 2018)</h3>
+                <p>"Crack in the Pillars - Will the Indian Democracy Sustain?"</p>
+                
+                <h3>Parliamentary Debate, National Law University, Jodhpur (Apr 2019)</h3>
+                <p>Broke as a finalist adjudicator in a debut National Debate tournament, a first from GLC, Bombay. Secured a position in the top 10% of all adjudicators.</p>
+                
+                <h3>Leibniz Lecture - The Remains of Liberalism, Azim Premji University (Oct 2019)</h3>
+                <p>Engaged with Leibniz Prize Recipient Prof. Christoph Möllers, discussing the rise of libertarian sentiment in the Indian Urban Middle Class.</p>
+            </section>
+            
+            <section id="advisory">
+                <h2>// Advisory Positions</h2>
+                
+                <h3>Member, Advisory Board, CB Educational Services (Sep 2019 - Aug 2022)</h3>
+                <p>Instrumental in website ideation and design, organizing international virtual conference "VirtuCon" on Law and Legal Studies, and drafting publication guidelines.</p>
+            </section>
+            
+            <section id="other">
+                <h2>// Other Experiences</h2>
+                
+                <h3>Second Runner Up, Seeghra Tantra, TEQIP National Hackathon</h3>
+                <p>Led legal and compliance research for team's prize-winning citizen safety device.</p>
+                
+                <h3>Freelance Writer (2018-Present)</h3>
+                <p>Authored high-impact content for clients from major corporates such as Koch Business Solutions, VISA, and more.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© Akshat V. Tenneti | Last updated: February 2025</p>
+        </footer>
     </div>
     
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <h2>Contact Me</h2>
-                <p>Feel free to reach out for collaborations, research opportunities, or to discuss technology law and policy.</p>
-                <div class="social-links">
-                    <a href="mailto:akshat10eti@gmail.com"><span class="icon">✉️</span></a>
-                    <a href="https://www.linkedin.com/in/akshattenneti/" target="_blank"><span class="icon">🔗</span></a>
-                    <a href="https://github.com/akshattenneti" target="_blank"><span class="icon">🌐</span></a>
-                </div>
-                <p class="copyright">© 2025 Akshat V. Tenneti. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Navigation toggle for mobile
-            const navToggle = document.querySelector('.nav-toggle');
-            const mainNav = document.querySelector('.main-nav');
-            
-            navToggle.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
-            });
-            
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
