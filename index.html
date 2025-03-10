@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akshat V. Tenneti | Tech Law </title>
+  <title>Akshat V. Tenneti | Tech Law</title>
   <style>
     /* Maximalist Dark Mode Portfolio */
     :root {
@@ -47,17 +47,6 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    
-    @keyframes rotateText {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
     
     @keyframes slideIn {
@@ -104,135 +93,6 @@
       margin: 0 auto;
       padding: 0;
       position: relative;
-    }
-    
-    .cursor-follower {
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      background: var(--gradient-1);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.5;
-      filter: var(--blur-effect);
-    }
-    
-    header {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 5vw;
-      overflow: hidden;
-    }
-    
-    .header-blob {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      top: 20%;
-      right: -100px;
-      background: var(--gradient-1);
-      border-radius: 50% 30% 40% 20%;
-      filter: var(--blur-effect);
-      opacity: 0.4;
-      animation: floatBlob 15s ease-in-out infinite;
-      z-index: -1;
-    }
-    
-    .header-blob:nth-child(2) {
-      width: 400px;
-      height: 400px;
-      top: 60%;
-      left: -100px;
-      background: var(--gradient-2);
-      animation-delay: -7s;
-      animation-duration: 18s;
-    }
-    
-    .header-content {
-      z-index: 1;
-      animation: fadeIn 1.2s ease-out;
-    }
-    
-    .name-title {
-      font-size: 7vw;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 20px;
-      background-image: var(--gradient-1);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientShift 5s ease infinite;
-    }
-    
-    .subtitle {
-      font-size: 1.8rem;
-      font-weight: 400;
-      margin-bottom: 40px;
-      max-width: 700px;
-    }
-    
-    .header-cta {
-      display: inline-block;
-      background: var(--gradient-1);
-      color: var(--text-primary);
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 20px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      animation: pulse 2s infinite;
-    }
-    
-    .header-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(110, 0, 255, 0.3);
-    }
-    
-    .scroll-indicator {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .scroll-indicator:hover {
-      opacity: 1;
-    }
-    
-    .scroll-indicator span {
-      font-size: 0.8rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    
-    .scroll-arrow {
-      width: 30px;
-      height: 30px;
-      border-right: 2px solid var(--text-primary);
-      border-bottom: 2px solid var(--text-primary);
-      transform: rotate(45deg);
-      animation: fadeIn 1.5s infinite alternate;
     }
     
     nav {
@@ -302,7 +162,6 @@
       width: 100%;
     }
     
-    /* Mobile Menu Toggle */
     .menu-toggle {
       display: none;
       cursor: pointer;
@@ -312,7 +171,65 @@
       border: none;
     }
     
-    /* Reduced section padding from 120px to 80px */
+    header {
+      position: relative;
+      height: 100vh;
+      padding: 0 5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;  /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      text-align: center;      /* Center text */
+      overflow: hidden;
+    }
+    
+    .header-blob {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: 20%;
+      right: -100px;
+      background: var(--gradient-1);
+      border-radius: 50% 30% 40% 20%;
+      filter: var(--blur-effect);
+      opacity: 0.4;
+      animation: floatBlob 15s ease-in-out infinite;
+      z-index: -1;
+    }
+    
+    .header-blob:nth-child(2) {
+      width: 400px;
+      height: 400px;
+      top: 60%;
+      left: -100px;
+      background: var(--gradient-2);
+      animation-delay: -7s;
+      animation-duration: 18s;
+    }
+    
+    .name-title {
+      font-size: 7vw;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 20px;
+      background-image: var(--gradient-1);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 5s ease infinite;
+    }
+    
+    .subtitle {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+    
+    /* Removed the .header-cta button entirely */
+    /* Removed the scroll-indicator from the header */
+    
     section {
       padding: 80px 5vw;
       position: relative;
@@ -338,7 +255,6 @@
       opacity: 0.2;
     }
     
-    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -360,43 +276,11 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     
-    .about-content {
-      animation: fadeIn 1s ease-out;
-    }
-    
     .about-text {
       line-height: 1.6;
       color: var(--text-secondary);
     }
     
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 30px;
-    }
-    
-    .skill-tag {
-      background-color: var(--card-bg);
-      color: var(--text-primary);
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--card-border);
-      transition: all 0.3s ease;
-    }
-    
-    .skill-tag:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-primary);
-      box-shadow: 0 5px 15px rgba(110, 0, 255, 0.2);
-    }
-    
-    /* Experience */
     .experience-timeline {
       position: relative;
       margin-top: 40px;
@@ -417,7 +301,7 @@
       padding: 30px;
       background-color: var(--card-bg);
       border-radius: 10px;
-      margin-bottom: 20px; /* Reduced from 40px to 20px */
+      margin-bottom: 20px;
       position: relative;
       border: 1px solid var(--card-border);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -471,11 +355,6 @@
       margin-bottom: 10px;
     }
     
-    .experience-description {
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    
     .experience-list {
       margin-top: 10px;
       list-style-position: inside;
@@ -495,7 +374,32 @@
       color: var(--accent-primary);
     }
     
-    /* Contact */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+    
+    .skill-tag {
+      background-color: var(--card-bg);
+      color: var(--text-primary);
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--card-border);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-primary);
+      box-shadow: 0 5px 15px rgba(110, 0, 255, 0.2);
+    }
+    
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -769,15 +673,9 @@
   <header>
     <div class="header-blob"></div>
     <div class="header-blob"></div>
-    <div class="header-content">
-      <h1 class="name-title">Akshat V. Tenneti</h1>
-      <p class="subtitle">Technology Law &amp; Policy Researcher</p>
-      <a href="#contact" class="header-cta">Get in Touch</a>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-arrow"></div>
-    </div>
+    <!-- Centered content (Name & Subtitle) -->
+    <h1 class="name-title">Akshat V. Tenneti</h1>
+    <p class="subtitle">Technology Law &amp; Policy Research</p>
   </header>
   
   <section id="about">
@@ -794,6 +692,8 @@
       </div>
     </div>
   </section>
+  
+  <!-- EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS, ETC. remain unchanged -->
   
   <section id="experience">
     <div class="container">
@@ -1009,9 +909,10 @@
             </a>
           </div>
         </div>
-        <!-- Updated form: mailto action -->
+        
+        <!-- Replace the action below with your actual Formspree (or other) endpoint -->
         <div class="contact-form">
-          <form action="mailto:akshat10eti@gmail.com" method="post" enctype="text/plain">
+          <form action="https://formspree.io/f/mqapkkjp" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" class="form-control" required />
@@ -1041,7 +942,10 @@
         <a href="#achievements">Achievements</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="footer-info">© Akshat V. Tenneti. All rights reserved. But Eh, I'm CC0ing this. Interpret "this" in the manner that makes sense to you.</p>
+      <p class="footer-info">
+        © Akshat V. Tenneti. All rights reserved. But Eh, I'm CC0ing this. 
+        Interpret "this" in the manner that makes sense to you.
+      </p>
     </div>
   </footer>
   
