@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akshat V. Tenneti | Tech Law </title>
   <style>
     /* Maximalist Dark Mode Portfolio */
@@ -302,6 +302,7 @@
       width: 100%;
     }
     
+    /* Mobile Menu Toggle */
     .menu-toggle {
       display: none;
       cursor: pointer;
@@ -311,14 +312,15 @@
       border: none;
     }
     
+    /* Reduced section padding from 120px to 80px */
     section {
-      padding: 120px 5vw;
+      padding: 80px 5vw;
       position: relative;
     }
     
     .section-title {
       font-size: 3rem;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       position: relative;
       display: inline-block;
       z-index: 1;
@@ -336,34 +338,26 @@
       opacity: 0.2;
     }
     
+    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
     
     .about-image {
       position: relative;
+      text-align: center;
     }
     
     .about-image img {
-      width: 100%;
-      border-radius: 10px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .about-image::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      background: var(--gradient-2);
-      top: 20px;
-      left: 20px;
-      z-index: 0;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     
     .about-content {
@@ -371,11 +365,11 @@
     }
     
     .about-text {
-      margin-bottom: 30px;
-      line-height: 1.8;
+      line-height: 1.6;
       color: var(--text-secondary);
     }
     
+    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -402,9 +396,10 @@
       box-shadow: 0 5px 15px rgba(110, 0, 255, 0.2);
     }
     
+    /* Experience */
     .experience-timeline {
       position: relative;
-      margin-top: 80px;
+      margin-top: 40px;
     }
     
     .timeline-line {
@@ -422,7 +417,7 @@
       padding: 30px;
       background-color: var(--card-bg);
       border-radius: 10px;
-      margin-bottom: 40px;
+      margin-bottom: 20px; /* Reduced from 40px to 20px */
       position: relative;
       border: 1px solid var(--card-border);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -473,7 +468,7 @@
     .experience-date {
       font-size: 0.9rem;
       color: var(--text-tertiary);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     
     .experience-description {
@@ -482,12 +477,12 @@
     }
     
     .experience-list {
-      margin-top: 15px;
+      margin-top: 10px;
       list-style-position: inside;
     }
     
     .experience-list li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--text-secondary);
       position: relative;
       padding-left: 20px;
@@ -500,6 +495,7 @@
       color: var(--accent-primary);
     }
     
+    /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -509,7 +505,7 @@
     
     .contact-info h3 {
       font-size: 2rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       background-image: var(--gradient-2);
       background-size: 200% auto;
       background-clip: text;
@@ -591,7 +587,7 @@
     }
     
     textarea.form-control {
-      min-height: 150px;
+      min-height: 120px;
       resize: vertical;
     }
     
@@ -691,12 +687,6 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
-      .rotating-text {
-        width: 150px;
-        height: 150px;
-        bottom: 30px;
-        right: 30px;
-      }
     }
     
     @media (max-width: 900px) {
@@ -705,11 +695,7 @@
       }
       .about-image {
         order: -1;
-        max-width: 500px;
-        margin: 0 auto 50px;
-      }
-      .research-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin-bottom: 40px;
       }
       .section-title {
         font-size: 2.5rem;
@@ -744,7 +730,7 @@
         font-size: 1.2rem;
       }
       section {
-        padding: 80px 5vw;
+        padding: 60px 5vw; /* Even smaller for mobile if desired */
       }
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -754,6 +740,10 @@
       }
       .experience-item, .workshop-card, .debate-item, .other-card {
         padding: 20px;
+      }
+      .about-image img {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -770,6 +760,8 @@
       <a href="#skills">Skills</a>
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
+      <!-- CV Download Link -->
+      <a href="CVM.pdf" download>CV</a>
     </div>
     <button class="menu-toggle">&#9776;</button>
   </nav>
@@ -779,7 +771,7 @@
     <div class="header-blob"></div>
     <div class="header-content">
       <h1 class="name-title">Akshat V. Tenneti</h1>
-      <p class="subtitle">Technology Law &amp; Policy Research</p>
+      <p class="subtitle">Technology Law &amp; Policy Researcher</p>
       <a href="#contact" class="header-cta">Get in Touch</a>
     </div>
     <div class="scroll-indicator">
@@ -789,11 +781,17 @@
   </header>
   
   <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-text">
-        I am a Technology Law and Policy Researcher with an interdisciplinary background spanning legal research, policy development, and cutting-edge technology analysis. My work focuses on AI governance, blockchain, intellectual property rights, and emerging regulatory frameworks to drive impactful legal innovation.
-      </p>
+    <div class="container about-grid">
+      <div class="about-image">
+        <!-- Replace "CV.jpeg" with your actual image file name/path -->
+        <img src="CV.jpeg" alt="Picture of Akshat" />
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+          I am a Technology Law and Policy Researcher with an interdisciplinary background spanning legal research, policy development, and cutting-edge technology analysis. My work focuses on AI governance, blockchain, intellectual property rights, and emerging regulatory frameworks to drive impactful legal innovation.
+        </p>
+      </div>
     </div>
   </section>
   
@@ -802,6 +800,7 @@
       <h2 class="section-title">Experience</h2>
       <div class="experience-timeline">
         <div class="timeline-line"></div>
+        
         <!-- Samvad Partners (Most Recent) -->
         <div class="experience-item">
           <h3 class="experience-title">Legal Research Intern</h3>
@@ -815,6 +814,7 @@
             <li>Researched the use of trademarked devices without prior authorization/license, analyzing exceptions/defenses under the Trademark Act.</li>
           </ul>
         </div>
+        
         <!-- Ikigai Law -->
         <div class="experience-item">
           <h3 class="experience-title">Legal Research Intern</h3>
@@ -827,6 +827,7 @@
             <li>Examined regulatory constraints affecting startup expansion, supporting the firm's fintech practice through analysis of payment instruments regulation and lending service provider frameworks.</li>
           </ul>
         </div>
+        
         <!-- Policy 4.0 -->
         <div class="experience-item">
           <h3 class="experience-title">Non-Resident Research Scholar</h3>
@@ -838,6 +839,7 @@
             <li>Engaged in the iterative development of novel policy frameworks.</li>
           </ul>
         </div>
+        
         <!-- Research Mentee -->
         <div class="experience-item">
           <h3 class="experience-title">Research Mentee</h3>
@@ -848,6 +850,7 @@
             <li>Explored challenges of copyright infringements in training Foundational Gen-AI Models.</li>
           </ul>
         </div>
+        
         <!-- DentalQ -->
         <div class="experience-item">
           <h3 class="experience-title">Legal &amp; Research Intern</h3>
@@ -858,6 +861,7 @@
             <li>Ensured ethical sourcing of training material while addressing compliance and liability issues.</li>
           </ul>
         </div>
+        
         <!-- Permissionless -->
         <div class="experience-item">
           <h3 class="experience-title">Research and Legal Intern</h3>
@@ -869,6 +873,7 @@
             <li>Co-drafted a whitepaper for a Decentralized Open Virtual Machine.</li>
           </ul>
         </div>
+        
         <!-- citrineandmint.eth -->
         <div class="experience-item">
           <h3 class="experience-title">Strategy Associate</h3>
@@ -879,6 +884,7 @@
             <li>Managed social media strategy leading to successful NFT sales.</li>
           </ul>
         </div>
+        
         <!-- Ayush Jaiswal’s Law Office -->
         <div class="experience-item">
           <h3 class="experience-title">Legal Intern</h3>
@@ -889,6 +895,7 @@
             <li>Formulated strategic solutions tailored to client needs.</li>
           </ul>
         </div>
+        
         <!-- Freelance Content Developer -->
         <div class="experience-item">
           <h3 class="experience-title">Freelance Content Developer</h3>
@@ -898,6 +905,7 @@
             <li>Authored high-impact content for major corporate clients.</li>
           </ul>
         </div>
+        
         <!-- LACSO -->
         <div class="experience-item">
           <h3 class="experience-title">Founding Member &amp; Technical Officer</h3>
@@ -993,16 +1001,17 @@
             <a href="mailto:akshat10eti@gmail.com" class="contact-link">
               <div class="contact-icon">📧</div> akshat10eti@gmail.com
             </a>
-            <a href="https://www.linkedin.com/in/akshattenneti/" class="contact-link">
+            <a href="https://www.linkedin.com/in/akshattenneti/" class="contact-link" target="_blank" rel="noopener">
               <div class="contact-icon">in</div> LinkedIn
             </a>
-            <a href="https://github.com/akshattenneti" class="contact-link">
+            <a href="https://github.com/akshattenneti" class="contact-link" target="_blank" rel="noopener">
               <div class="contact-icon">GH</div> GitHub
             </a>
           </div>
         </div>
+        <!-- Updated form: mailto action -->
         <div class="contact-form">
-          <form action="#" method="post">
+          <form action="mailto:akshat10eti@gmail.com" method="post" enctype="text/plain">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" class="form-control" required />
