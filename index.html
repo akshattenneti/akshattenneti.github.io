@@ -95,6 +95,7 @@
       position: relative;
     }
     
+    /* Navigation */
     nav {
       position: fixed;
       top: 0;
@@ -171,15 +172,16 @@
       border: none;
     }
     
+    /* Header */
     header {
       position: relative;
       height: 100vh;
       padding: 0 5vw;
       display: flex;
       flex-direction: column;
-      align-items: center;  /* Center horizontally */
-      justify-content: center; /* Center vertically */
-      text-align: center;      /* Center text */
+      align-items: center;   /* horizontally center content */
+      justify-content: center; /* vertically center content */
+      text-align: center;       /* center text */
       overflow: hidden;
     }
     
@@ -227,9 +229,7 @@
       max-width: 700px;
     }
     
-    /* Removed the .header-cta button entirely */
-    /* Removed the scroll-indicator from the header */
-    
+    /* Section General */
     section {
       padding: 80px 5vw;
       position: relative;
@@ -255,16 +255,13 @@
       opacity: 0.2;
     }
     
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    /* About Section (Centered Image & Text) */
+    .about-center {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-    }
-    
-    .about-image {
-      position: relative;
       text-align: center;
+      gap: 20px;
     }
     
     .about-image img {
@@ -277,10 +274,13 @@
     }
     
     .about-text {
+      max-width: 800px;
       line-height: 1.6;
       color: var(--text-secondary);
+      margin: 0 auto;
     }
     
+    /* Experience */
     .experience-timeline {
       position: relative;
       margin-top: 40px;
@@ -374,6 +374,7 @@
       color: var(--accent-primary);
     }
     
+    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -400,6 +401,7 @@
       box-shadow: 0 5px 15px rgba(110, 0, 255, 0.2);
     }
     
+    /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -517,6 +519,7 @@
       box-shadow: 0 10px 20px rgba(110, 0, 255, 0.3);
     }
     
+    /* Footer */
     footer {
       background-color: var(--card-bg);
       padding: 50px 5vw;
@@ -594,13 +597,6 @@
     }
     
     @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .about-image {
-        order: -1;
-        margin-bottom: 40px;
-      }
       .section-title {
         font-size: 2.5rem;
       }
@@ -634,7 +630,7 @@
         font-size: 1.2rem;
       }
       section {
-        padding: 60px 5vw; /* Even smaller for mobile if desired */
+        padding: 60px 5vw;
       }
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -642,7 +638,10 @@
       .section-title {
         font-size: 2rem;
       }
-      .experience-item, .workshop-card, .debate-item, .other-card {
+      .experience-item,
+      .workshop-card,
+      .debate-item,
+      .other-card {
         padding: 20px;
       }
       .about-image img {
@@ -655,6 +654,7 @@
 <body>
   <div class="noise"></div>
   
+  <!-- NAVIGATION -->
   <nav>
     <a href="#" class="logo"><span>Akshat V. Tenneti</span></a>
     <div class="nav-links">
@@ -670,21 +670,22 @@
     <button class="menu-toggle">&#9776;</button>
   </nav>
   
+  <!-- HEADER -->
   <header>
     <div class="header-blob"></div>
     <div class="header-blob"></div>
-    <!-- Centered content (Name & Subtitle) -->
     <h1 class="name-title">Akshat V. Tenneti</h1>
     <p class="subtitle">Technology Law &amp; Policy Research</p>
   </header>
   
+  <!-- ABOUT -->
   <section id="about">
-    <div class="container about-grid">
-      <div class="about-image">
-        <!-- Replace "CV.jpeg" with your actual image file name/path -->
-        <img src="CV.jpeg" alt="Picture of Akshat" />
-      </div>
-      <div class="about-content">
+    <div class="container">
+      <div class="about-center">
+        <div class="about-image">
+          <!-- Replace "CV.jpeg" with your actual image file name/path -->
+          <img src="CV.jpeg" alt="Picture of Akshat" />
+        </div>
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
           I am a Technology Law and Policy Researcher with an interdisciplinary background spanning legal research, policy development, and cutting-edge technology analysis. My work focuses on AI governance, blockchain, intellectual property rights, and emerging regulatory frameworks to drive impactful legal innovation.
@@ -693,8 +694,7 @@
     </div>
   </section>
   
-  <!-- EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS, ETC. remain unchanged -->
-  
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <h2 class="section-title">Experience</h2>
@@ -820,6 +820,7 @@
     </div>
   </section>
   
+  <!-- EDUCATION -->
   <section id="education">
     <div class="container">
       <h2 class="section-title">Education</h2>
@@ -851,6 +852,7 @@
     </div>
   </section>
   
+  <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
@@ -864,6 +866,7 @@
     </div>
   </section>
   
+  <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <div class="container">
       <h2 class="section-title">Achievements &amp; Awards</h2>
@@ -888,6 +891,7 @@
     </div>
   </section>
   
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
@@ -910,9 +914,9 @@
           </div>
         </div>
         
-        <!-- Replace the action below with your actual Formspree (or other) endpoint -->
+        <!-- Replace the action below with your Formspree (or other) endpoint -->
         <div class="contact-form">
-          <form action="https://formspree.io/f/mqapkkjp" method="POST">
+          <form action="https://formspree.io/f/yourFormID" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" class="form-control" required />
@@ -932,6 +936,7 @@
     </div>
   </section>
   
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <div class="footer-links">
